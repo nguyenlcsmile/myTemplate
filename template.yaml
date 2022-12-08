@@ -2,9 +2,6 @@ AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: Template Test
 
-Parameters:
-  BucketName: { Type: String, Default: "my-avatar" }
-
 Resources:
   MyTemplate:
     Type: AWS::Serverless::Function
@@ -12,8 +9,3 @@ Resources:
       Handler: myFunction/app.index
       Runtime: python3.8
       CodeUri:
-
-  MyS3Bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Ref BucketName
