@@ -8,4 +8,5 @@ Resources:
     Properties:
       Handler: myFunction/app.index
       Runtime: python3.8
+      Timeout: 180
       CodeUri:
